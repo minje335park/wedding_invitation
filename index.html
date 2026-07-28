@@ -17,7 +17,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-myeongjo.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         /* ===== RESET ===== */
@@ -568,8 +570,7 @@
         </div>
         <section class="onoff_2">
             <div class="list_wrap">
-                <button type="button" class="info_detail">정보 더보기</button>
-                <ul class="grid_box">
+                <ul class="grid_box open">
                     <li>
                         <h3>신랑 측 혼주</h3>
                         <div class="list_con">
@@ -621,15 +622,6 @@
         </section>
     </div>
 
-    <!-- ===== RSVP 섹션 ===== -->
-    <input type="hidden" id="isPopup" value="true" />
-    <div id="area23" idx="23" class="rsvp rsvp_area">
-        <h3>참석의사 전달</h3>
-        <p>
-            축하의 마음으로 참석해 주실<br />모든 분을 정중히 모시고자 하오니,<br />참석 여부를 알려주시면 감사하겠습니다.
-        </p>
-        <button type="button" class="btn purple" onclick="openPop('attend_pop')">참석의사 전달</button>
-    </div>
 
     <!-- ===== 갤러리 섹션 제외 ===== -->
 
@@ -783,120 +775,7 @@
     </footer>
 </div>
 
-<!-- ===== 참석의사 전달 확인 팝업 ===== -->
-<div class="pop_wrap attend_pop" id="attend_pop_wrap">
-    <div class="bottom_pop rsvp">
-        <button type="button" class="btn btn_close" onclick="closePop('attend_pop')">
-            <span style="font-size:22px;line-height:1;">✕</span>
-        </button>
-        <div class="title"><h2>참석의사 전달</h2></div>
-        <div class="contents">
-            <div class="txt">
-                <p>축하의 마음으로 참석해 주실<br />모든 분을 정중히 모시고자 하오니,<br />참석 여부를 알려주시면 감사하겠습니다.</p>
-            </div>
-            <div class="list">
-                <ul>
-                    <li><span>주인공</span><p>신랑 박민제 &amp; 신부 채운슬</p></li>
-                    <li><span>예식일</span><p>2026-09-05 토요일 오후 3시</p></li>
-                    <li><span>위치</span><p>더링크호텔 5층 가든홀</p></li>
-                </ul>
-            </div>
-            <button type="button" class="btn purple" onclick="openPop('attendIp_pop')">참석의사 전달</button>
-            <div class="close">
-                <a href="javascript:closePopToday();">오늘 그만보기</a>
-                <a href="javascript:;" onclick="closePop('attend_pop')">닫기</a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- ===== 참석의사 입력 팝업 ===== -->
-<div class="pop_wrap attendIp_pop" id="attendIp_pop_wrap">
-    <div class="bottom_pop rsvp">
-        <button type="button" class="btn btn_close" onclick="closePop('attendIp_pop')">
-            <span style="font-size:22px;line-height:1;">✕</span>
-        </button>
-        <div class="title"><h2>참석의사 전달</h2></div>
-        <div class="contents">
-            <div class="tab_menu">
-                <button type="button" class="btn tab_btn active" data-tab="tab_groom" onclick="switchTab(this)">신랑</button>
-                <button type="button" class="btn tab_btn" data-tab="tab_priest" onclick="switchTab(this)">신부</button>
-            </div>
-            <!-- 신랑 탭 -->
-            <div class="tab_content show" id="tab_groom">
-                <form id="frmRsvp_0" onsubmit="submitRsvp(event)">
-                    <input type="hidden" name="Type" value="G" />
-                    <div class="form_list">
-                        <ul>
-                            <li>
-                                <span>성함 <strong class="import"></strong></span>
-                                <input type="text" name="Name" class="inp" placeholder="성함" maxlength="50" required />
-                            </li>
-                            <li>
-                                <span>참석인원 <strong class="import"></strong></span>
-                                <input type="text" name="AttendCount" class="inp" placeholder="인원수" pattern="[0-9]+" required />
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="example"><p>전달한 내용은 수정이 불가합니다. <br />내용 변동이 있을 경우 재전달해주세요.</p></div>
-                    <div class="policy">
-                        <div class="title"><h4>개인정보 수집 및 이용 동의 <span>(필수)</span></h4></div>
-                        <div class="policy_con">
-                            <p>RSVP 서비스 이용을 위한 개인정보 수집 및 이용에 동의해 주세요.</p>
-                            <ul class="dec">
-                                <li><span>제공 받는 자 :</span><p>모바일 초대장 주문자</p></li>
-                                <li><span>이용 목적 :</span><p>RSVP 응답 확인 및 관련 서비스 제공</p></li>
-                                <li><span>제공 항목 :</span><p>성함, 연락처 등 RSVP에 입력된 항목</p></li>
-                                <li><span>보유 기간 :</span><p>예식일(행사일)로부터 90일</p></li>
-                            </ul>
-                            <p>개인정보 수집 및 이용에 대한 동의를 거부할 권리가 있으며, 동의 거부 시 RSVP 서비스 이용이 불가합니다.</p>
-                        </div>
-                        <div class="policy_list">
-                            <ul><li><span class="check_box"><input type="checkbox" name="agree" id="agree_g" required /><label for="agree_g">수집 및 이용에 동의합니다.</label></span></li></ul>
-                        </div>
-                    </div>
-                    <div class="bottom_box"><button type="submit" class="btn purple" id="rsvpReg">참석의사 전달</button></div>
-                </form>
-            </div>
-            <!-- 신부 탭 -->
-            <div class="tab_content" id="tab_priest">
-                <form id="frmRsvp_1" onsubmit="submitRsvp(event)">
-                    <input type="hidden" name="Type" value="B" />
-                    <div class="form_list">
-                        <ul>
-                            <li>
-                                <span>성함 <strong class="import"></strong></span>
-                                <input type="text" name="Name" class="inp" placeholder="성함" maxlength="50" required />
-                            </li>
-                            <li>
-                                <span>참석인원 <strong class="import"></strong></span>
-                                <input type="text" name="AttendCount" class="inp" placeholder="인원수" pattern="[0-9]+" required />
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="example"><p>전달한 내용은 수정이 불가합니다. <br />내용 변동이 있을 경우 재전달해주세요.</p></div>
-                    <div class="policy">
-                        <div class="title"><h4>개인정보 수집 및 이용 동의 <span>(필수)</span></h4></div>
-                        <div class="policy_con">
-                            <p>RSVP 서비스 이용을 위한 개인정보 수집 및 이용에 동의해 주세요.</p>
-                            <ul class="dec">
-                                <li><span>제공 받는 자 :</span><p>모바일 초대장 주문자</p></li>
-                                <li><span>이용 목적 :</span><p>RSVP 응답 확인 및 관련 서비스 제공</p></li>
-                                <li><span>제공 항목 :</span><p>성함, 연락처 등 RSVP에 입력된 항목</p></li>
-                                <li><span>보유 기간 :</span><p>예식일(행사일)로부터 90일</p></li>
-                            </ul>
-                            <p>개인정보 수집 및 이용에 대한 동의를 거부할 권리가 있으며, 동의 거부 시 RSVP 서비스 이용이 불가합니다.</p>
-                        </div>
-                        <div class="policy_list">
-                            <ul><li><span class="check_box"><input type="checkbox" name="agree" id="agree_b" required /><label for="agree_b">수집 및 이용에 동의합니다.</label></span></li></ul>
-                        </div>
-                    </div>
-                    <div class="bottom_box"><button type="submit" class="btn purple">참석의사 전달</button></div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script>
 // ===== 로더 =====
@@ -905,67 +784,8 @@ window.addEventListener('load', function() {
         var loader = document.querySelector('.loader_mcard');
         if (loader) { loader.style.display = 'none'; }
     }, 800);
-
-    // 팝업 자동 표시 (오늘 그만보기 아닌 경우만)
-    var today = new Date().toDateString();
-    var noShow = localStorage.getItem('rsvp_noshow');
-    if (noShow !== today) {
-        setTimeout(function() { openPop('attend_pop'); }, 1500);
-    }
 });
 
-// ===== 팝업 열기/닫기 =====
-function openPop(cls) {
-    document.querySelectorAll('.pop_wrap').forEach(function(el) {
-        el.classList.remove('open');
-    });
-    var el = document.getElementById(cls + '_wrap');
-    if (el) el.classList.add('open');
-    document.body.style.overflow = 'hidden';
-}
-function closePop(cls) {
-    var el = document.getElementById(cls + '_wrap');
-    if (el) el.classList.remove('open');
-    document.body.style.overflow = '';
-}
-function closePopToday() {
-    var today = new Date().toDateString();
-    localStorage.setItem('rsvp_noshow', today);
-    closePop('attend_pop');
-}
-function layerPopOpen(cls) { openPop(cls); }
-function popClose() {
-    document.querySelectorAll('.pop_wrap.open').forEach(function(el) {
-        el.classList.remove('open');
-    });
-    document.body.style.overflow = '';
-}
-
-// ===== 탭 전환 =====
-function switchTab(btn) {
-    document.querySelectorAll('.tab_btn').forEach(function(b) { b.classList.remove('active'); });
-    document.querySelectorAll('.tab_content').forEach(function(c) { c.classList.remove('show'); });
-    btn.classList.add('active');
-    var tabId = btn.getAttribute('data-tab');
-    var tabEl = document.getElementById(tabId);
-    if (tabEl) tabEl.classList.add('show');
-}
-
-// ===== RSVP 제출 =====
-function submitRsvp(e) {
-    e.preventDefault();
-    showToast('참석의사가 전달되었습니다.');
-    closePop('attendIp_pop');
-    e.target.reset();
-}
-
-// ===== 혼주 정보 아코디언 =====
-document.querySelector('.info_detail').addEventListener('click', function() {
-    this.classList.toggle('active');
-    var list = document.querySelector('.onoff_2 .grid_box');
-    list.classList.toggle('open');
-    this.textContent = this.classList.contains('active') ? '정보 닫기' : '정보 더보기';
-});
 
 // ===== 계좌번호 팝업 =====
 function openAccount(idx) {

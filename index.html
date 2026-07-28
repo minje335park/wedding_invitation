@@ -64,21 +64,52 @@
             padding-bottom: 177.875%; /* 1423/800 */
             overflow: hidden;
         }
-        #area1 .item { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        #area1 .item img { width: 100%; height: 100%; object-fit: cover; }
-        #area1 .item.ITC02 { z-index: 1; pointer-events: none; }
-        #area1 .item.photo { z-index: 0; }
+
+        /* 이미지 레이어: 전체 채움 */
+        #area1 #lay18165740,
+        #area1 #lay18165741,
+        #area1 #lay18165742 {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+        #area1 #lay18165740 img,
+        #area1 #lay18165741 img,
+        #area1 #lay18165742 img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        #area1 #lay18165740 { z-index: 1; pointer-events: none; }
+        #area1 #lay18165741 { z-index: 0; }
         #area1 #lay18165742 { z-index: 2; mix-blend-mode: screen; pointer-events: none; }
 
-        /* 이름/날짜/장소 텍스트 오버레이 */
-        #area1 .item.ITC01 {
+        /* 텍스트 오버레이: 각자 위치로 */
+        #lay18165743 {
             position: absolute;
-            display: flex;
+            top: 78.84%; left: 0; width: 44.31%;
+            display: flex; align-items: center; justify-content: flex-end;
+            padding-right: 1.5%;
+            z-index: 3;
         }
-        #area1 #lay18165743 { top: 78.84%; left: 0; width: 44.31%; height: auto; align-items: center; z-index: 3; }
-        #area1 #lay18165744 { top: 78.91%; left: 56.16%; width: 43.83%; height: auto; align-items: center; z-index: 3; }
-        #area1 #lay18165746 { top: 87.12%; left: 0; width: 100%; height: auto; align-items: center; justify-content: center; z-index: 3; }
-        #area1 #lay18165745 { top: 90.39%; left: 0; width: 100%; height: auto; align-items: center; justify-content: center; z-index: 3; }
+        #lay18165744 {
+            position: absolute;
+            top: 78.91%; left: 56.16%; width: 43.83%;
+            display: flex; align-items: center; justify-content: flex-start;
+            padding-left: 1.5%;
+            z-index: 3;
+        }
+        #lay18165746 {
+            position: absolute;
+            top: 87.12%; left: 0; width: 100%;
+            display: flex; align-items: center; justify-content: center;
+            z-index: 3;
+        }
+        #lay18165745 {
+            position: absolute;
+            top: 90.39%; left: 0; width: 100%;
+            display: flex; align-items: center; justify-content: center;
+            z-index: 3;
+        }
 
         /* ===== AREA2 - 인사말 ===== */
         #area2 {
@@ -474,7 +505,7 @@
         </div>
         <!-- 메인 사진 -->
         <div class="item photo ITC03" id="lay18165741">
-            <img src="https://mcard-resources.barunsoncard.com/upload/invitation/260716/1241844/177415e6-a24f-449e-b3c7-f5d00f782503.jpg" alt="photo" />
+            <img src="assets/images/main_photo.jpg" alt="photo" />
         </div>
         <!-- 이펙트 GIF -->
         <div class="item ITC02" id="lay18165742">

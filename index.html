@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>박민제 ♥ 채운슬 결혼합니다.</title>
+  
+  <!-- Open Graph for Kakao / SNS Sharing -->
+  <meta property="og:title" content="박민제 ♥ 채운슬 결혼합니다." />
+  <meta property="og:description" content="2026년 9월 5일 토요일 오후 3시, 더링크호텔 5층 가든홀" />
+  <meta property="og:image" content="assets/images/main_photo.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="app">
+  <!-- 1. Main Cover Section -->
+  <section class="main-cover">
+    <img src="assets/images/main_photo.jpg" alt="메인 결혼 사진" class="layer-photo">
+    <img src="assets/images/main_frame.png" alt="프레임" class="layer-frame">
+    <img src="assets/images/main_effect.gif" alt="이펙트" class="layer-effect">
+    
+    <div class="main-info">
+      <div class="names-wrap">
+        <span class="groom">박민제</span>
+        <span class="heart">♥</span>
+        <span class="bride">채운슬</span>
+      </div>
+      <div class="date-text">2026. 9. 5 SAT PM 03:00</div>
+      <div class="venue-text">더링크호텔 5층 가든홀</div>
+    </div>
+  </section>
+
+  <!-- 2. Greeting Section -->
+  <section class="greeting-section">
+    <img src="assets/images/greeting_header.png" alt="초대의 글" class="section-divider">
+    
+    <div class="greeting-text">
+      따뜻한 봄날,<br>
+      음악을 좋아하던 공대생과<br>
+      춤을 사랑하던 음대생이 만났습니다.<br><br>
+      기타를 치는 신랑과<br>
+      리듬을 타는 신부는<br><br>
+      이제 서로의 박자를 맞추며<br>
+      같은 길을 걸어가려 합니다.<br><br>
+      저희의 첫 페이지를 함께해 주세요.
+    </div>
+
+    <!-- Contact Box -->
+    <div class="contact-container">
+      <div class="contact-quick">
+        <div class="contact-quick-item">
+          <span class="role">신랑 박민제</span>
+          <div class="actions">
+            <a href="tel:01026347835" class="btn-icon" title="전화">
+              <img src="assets/images/ico_call.svg" alt="전화">
+            </a>
+            <a href="sms:01026347835" class="btn-icon" title="문자">
+              <img src="assets/images/ico_sms.svg" alt="문자">
+            </a>
+          </div>
+        </div>
+        <div class="contact-quick-item">
+          <span class="role">신부 채운슬</span>
+          <div class="actions">
+            <a href="tel:01058087704" class="btn-icon" title="전화">
+              <img src="assets/images/ico_call.svg" alt="전화">
+            </a>
+            <a href="sms:01058087704" class="btn-icon" title="문자">
+              <img src="assets/images/ico_sms.svg" alt="문자">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="accordion-toggle-btn" id="toggle-parents-btn">
+        혼주에게 연락하기 ▼
+      </button>
+
+      <div class="contact-parents-list" id="parents-list">
+        <!-- Groom Parents -->
+        <div class="parents-card">
+          <h4>신랑 측 혼주</h4>
+          <div class="parents-row">
+            <div class="relation-name">
+              <span class="relation">아버지</span>
+              <span class="name">박종건</span>
+            </div>
+            <div class="actions">
+              <a href="tel:01085287835" class="btn-icon"><img src="assets/images/ico_call.svg" alt="전화"></a>
+              <a href="sms:01085287835" class="btn-icon"><img src="assets/images/ico_sms.svg" alt="문자"></a>
+            </div>
+          </div>
+          <div class="parents-row">
+            <div class="relation-name">
+              <span class="relation">어머니</span>
+              <span class="name">이경애</span>
+            </div>
+            <div class="actions">
+              <a href="tel:01055210837" class="btn-icon"><img src="assets/images/ico_call.svg" alt="전화"></a>
+              <a href="sms:01055210837" class="btn-icon"><img src="assets/images/ico_sms.svg" alt="문자"></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bride Parents -->
+        <div class="parents-card">
+          <h4>신부 측 혼주</h4>
+          <div class="parents-row">
+            <div class="relation-name">
+              <span class="relation">아버지</span>
+              <span class="name">채경석</span>
+            </div>
+            <div class="actions">
+              <a href="tel:01052797704" class="btn-icon"><img src="assets/images/ico_call.svg" alt="전화"></a>
+              <a href="sms:01052797704" class="btn-icon"><img src="assets/images/ico_sms.svg" alt="문자"></a>
+            </div>
+          </div>
+          <div class="parents-row">
+            <div class="relation-name">
+              <span class="relation">어머니</span>
+              <span class="name">정희숙</span>
+            </div>
+            <div class="actions">
+              <a href="tel:01056617704" class="btn-icon"><img src="assets/images/ico_call.svg" alt="전화"></a>
+              <a href="sms:01056617704" class="btn-icon"><img src="assets/images/ico_sms.svg" alt="문자"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. RSVP Section -->
+  <section class="rsvp-section">
+    <h3>참석의사 전달</h3>
+    <p>축하의 마음으로 참석해 주실 모든 분을 정중히 모시고자 하오니,<br>참석 여부를 알려주시면 감사하겠습니다.</p>
+    <button type="button" class="btn-primary" id="btn-rsvp-open">참석의사 전달하기</button>
+  </section>
+
+  <!-- 4. Calendar & D-Day Countdown -->
+  <section class="calendar-section">
+    <div class="calendar-header">
+      <div class="calendar-title">SEPTEMBER 2026</div>
+      <div class="calendar-subtitle">2026. 09. 05 SAT PM 03:00</div>
+    </div>
+
+    <!-- September 2026 Calendar -->
+    <table class="calendar-table">
+      <thead>
+        <tr>
+          <th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td class="wedding-day"><span>5</span></td>
+        </tr>
+        <tr>
+          <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+        </tr>
+        <tr>
+          <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+        </tr>
+        <tr>
+          <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+        </tr>
+        <tr>
+          <td>27</td><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Live Countdown -->
+    <div class="countdown-box">
+      <div class="countdown-unit">
+        <span class="countdown-num" id="dday-days">00</span>
+        <span class="countdown-label">DAYS</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="dday-hours">00</span>
+        <span class="countdown-label">HOURS</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="dday-minutes">00</span>
+        <span class="countdown-label">MINS</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="dday-seconds">00</span>
+        <span class="countdown-label">SECS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Location Section -->
+  <section class="location-section">
+    <img src="assets/images/location_header.png" alt="오시는 길" class="section-divider">
+
+    <div class="location-info">
+      <div class="venue-name-big">더링크호텔</div>
+      <div class="venue-hall">5층 가든홀</div>
+      <div class="venue-address">서울 구로구 경인로 610</div>
+      <div class="venue-tel">TEL: 02-852-5000</div>
+    </div>
+
+    <!-- Map View -->
+    <div class="map-container">
+      <iframe src="https://maps.google.com/maps?q=37.5054332,126.8839722&hl=ko&z=16&output=embed" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <a href="https://tmap.co.kr" target="_blank" class="nav-btn">
+        <img src="assets/images/tmap.png" alt="티맵"> 티맵
+      </a>
+      <a href="https://navi.kakao.com" target="_blank" class="nav-btn">
+        <img src="assets/images/kakaonav.png" alt="카카오내비"> 카카오내비
+      </a>
+      <a href="https://m.map.naver.com/search2/search.nhn?query=서울 구로구 경인로 610" target="_blank" class="nav-btn">
+        <img src="assets/images/navermap.jpg" alt="네이버지도"> 네이버지도
+      </a>
+    </div>
+  </section>
+
+  <!-- 6. Remittance Section (Accounts) -->
+  <section class="remittance-section">
+    <img src="assets/images/remittance_header.png" alt="마음 전하실 곳" class="section-divider">
+
+    <div class="account-btn-wrap">
+      <button type="button" class="btn-account" id="btn-groom-account">
+        신랑 측 계좌번호 보기
+      </button>
+      <button type="button" class="btn-account" id="btn-bride-account">
+        신부 측 계좌번호 보기
+      </button>
+    </div>
+  </section>
+
+  <!-- 7. Guestbook Section -->
+  <section class="guestbook-section">
+    <img src="assets/images/guestbook_header.png" alt="방명록" class="section-divider">
+    <h3>축하 메시지</h3>
+
+    <form class="guestbook-form" id="guestbook-form">
+      <div class="form-row-double">
+        <input type="text" id="gb-name" class="inp-text" placeholder="이름" maxlength="20" required>
+        <input type="password" id="gb-password" class="inp-text" placeholder="비밀번호" maxlength="20" required>
+      </div>
+      <textarea id="gb-message" class="inp-text" placeholder="신랑 신부에게 축하의 메시지를 남겨주세요." maxlength="200" required></textarea>
+      <button type="submit" class="btn-submit-guestbook">축하메시지 남기기</button>
+    </form>
+
+    <div class="guestbook-list" id="guestbook-list">
+      <!-- Dynamically Rendered -->
+    </div>
+  </section>
+
+  <!-- 8. Footer -->
+  <footer class="footer">
+    <div class="footer-sns">
+      <button class="footer-sns-btn" id="btn-add-calendar" title="일정 등록">📅</button>
+      <button class="footer-sns-btn" id="btn-copy-link" title="링크 복사">🔗</button>
+    </div>
+    <div class="footer-text">
+      박민제 ♥ 채운슬의 모바일 청첩장<br>
+      © 2026. All rights reserved.
+    </div>
+  </footer>
+</div>
+
+<!-- MODALS -->
+
+<!-- Groom Account Modal -->
+<div class="modal-overlay" id="modal-groom-account">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title">신랑 측 계좌번호</div>
+      <button class="btn-close-modal">&times;</button>
+    </div>
+    <div class="account-card-list">
+      <!-- Groom -->
+      <div class="account-card">
+        <div class="account-owner-type">신랑 계좌</div>
+        <div class="account-bank-holder">하나은행 (예금주: 박민제)</div>
+        <div class="account-number-text">14391025222907</div>
+        <button class="btn-copy-account" data-account="14391025222907">계좌번호 복사</button>
+      </div>
+      <!-- Groom Father -->
+      <div class="account-card">
+        <div class="account-owner-type">신랑 혼주 (아버지) 계좌</div>
+        <div class="account-bank-holder">NH농협 (예금주: 박종건)</div>
+        <div class="account-number-text">35812155503</div>
+        <button class="btn-copy-account" data-account="35812155503">계좌번호 복사</button>
+      </div>
+      <!-- Groom Mother -->
+      <div class="account-card">
+        <div class="account-owner-type">신랑 혼주 (어머니) 계좌</div>
+        <div class="account-bank-holder">우리은행 (예금주: 이경애)</div>
+        <div class="account-number-text">1002743236576</div>
+        <button class="btn-copy-account" data-account="1002743236576">계좌번호 복사</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bride Account Modal -->
+<div class="modal-overlay" id="modal-bride-account">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title">신부 측 계좌번호</div>
+      <button class="btn-close-modal">&times;</button>
+    </div>
+    <div class="account-card-list">
+      <!-- Bride -->
+      <div class="account-card">
+        <div class="account-owner-type">신부 계좌</div>
+        <div class="account-bank-holder">신한은행 (예금주: 채운슬)</div>
+        <div class="account-number-text">110513962719</div>
+        <button class="btn-copy-account" data-account="110513962719">계좌번호 복사</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RSVP Modal -->
+<div class="modal-overlay" id="modal-rsvp">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title">참석의사 전달</div>
+      <button class="btn-close-modal">&times;</button>
+    </div>
+    
+    <div class="rsvp-tab-menu">
+      <button type="button" class="rsvp-tab-btn active" data-tab="groom">신랑 측</button>
+      <button type="button" class="rsvp-tab-btn" data-tab="bride">신부 측</button>
+    </div>
+
+    <form id="rsvp-form">
+      <input type="hidden" id="rsvp-side-type" value="groom">
+      <input type="hidden" id="rsvp-eat-val" value="예정">
+      <input type="hidden" id="rsvp-bus-val" value="미탑승">
+
+      <div class="form-group">
+        <label for="rsvp-name">성함 *</label>
+        <input type="text" id="rsvp-name" class="inp-text" placeholder="성함을 입력하세요" required>
+      </div>
+
+      <div class="form-group">
+        <label for="rsvp-count">참석 인원 *</label>
+        <input type="number" id="rsvp-count" class="inp-text" placeholder="본인 포함 인원수 (숫자)" min="1" value="1" required>
+      </div>
+
+      <div class="form-group">
+        <label>식사 여부</label>
+        <div class="btn-option-group">
+          <button type="button" class="btn-option eat-option active" data-value="예정">예정</button>
+          <button type="button" class="btn-option eat-option" data-value="안함">안함</button>
+          <button type="button" class="btn-option eat-option" data-value="미정">미정</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>대절버스 탑승 여부</label>
+        <div class="btn-option-group">
+          <button type="button" class="btn-option bus-option active" data-value="탑승">탑승</button>
+          <button type="button" class="btn-option bus-option" data-value="미탑승">미탑승</button>
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-top: 20px;">
+        <label style="font-weight: 400; font-size: 0.82rem; color: #666; display: flex; align-items: center; gap: 6px;">
+          <input type="checkbox" id="rsvp-agree" checked required>
+          개인정보 수집 및 이용에 동의합니다. (필수)
+        </label>
+      </div>
+
+      <button type="submit" class="btn-primary" style="width: 100%; max-width: 100%; margin-top: 10px;">
+        참석의사 전달하기
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+</body>
+</html>
